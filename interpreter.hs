@@ -12,7 +12,7 @@ token_identify '(' = ("SCOPE_L", '(')
 token_identify ')' = ("SCOPE_R", ')')
 token_identify c 
     | c >= '0' && c <= '9' = ("NUMBER", c)
-    | ('a' <= c && c <= 'z') || (c >= 'A' && c <= 'Z') = ("LETTER", c)
+    -- | ('a' <= c && c <= 'z') || (c >= 'A' && c <= 'Z') = ("LETTER", c)
 token_identify _ = ("UNKNOWN", '?')
 
 classify_tokens :: String -> [Token]
